@@ -5,7 +5,6 @@ import { ThemeProvider } from '@material-ui/core'
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 
 import * as serviceWorker from './components/serviceWorker'
-import logo from './static/logo.svg'
 import Sidebar from './components/sidebar'
 import { mapRoutes } from './functions';
 import routes from './routes';
@@ -15,14 +14,18 @@ ReactDOM.render(
     <ThemeProvider>
       <Router>
         <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+          <img src={require('./static/logo.png')} className="App-logo" alt="logo" />
           <h1>We're here to help!</h1>
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={require('./static/logo.png')} className="App-logo" alt="logo" />
         </header>
 
         <Sidebar routes={routes}>
           <Switch>{mapRoutes(routes)}</Switch>
         </Sidebar>
+
+        <footer className="App-header">
+
+        </footer>
       </Router>
     </ThemeProvider>
   </React.StrictMode>,
