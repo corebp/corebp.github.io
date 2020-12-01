@@ -89,7 +89,7 @@ export default function RouterBreadcrumbs({ routes = [], children }) {
             }}
         </Route>
 
-        <div className="content" style={{ flex: 1, flexDirection: 'row', display: 'flex' }}>
+        <div className="content" style={{ flex: 1, flexDirection: 'row', display: 'flex', marginBottom: '20%' }}>
             <div className={classes.root}>
                 <nav className={classes.lists} aria-label="mailbox folders">
                     <List>{routes.map((e, i) => (
