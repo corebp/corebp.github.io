@@ -23,7 +23,7 @@ export function mapRoutes(r) {
 
 export function getChild(arr, to) {
     if (arr) {
-        return arr.map(e => {
+        let obj = arr.map(e => {
             if (e?.route === to) {
                 return e
             }
@@ -31,7 +31,8 @@ export function getChild(arr, to) {
                 let child = e?.children?.find(c => c?.route === to)
                 return child && child.length > 0 ? child : getChild(e?.children, to)
             }
-        }).filter(x => x)            
+        }).filter(x => x)
+        if (obj.length > 0) return obj
     }
 }
 
@@ -40,6 +41,6 @@ export function dig(arr) {
 }
 
 export function getLabel(routes, to) {
-    let path = dig(getChild(routes, to))
-    return path?.label
+    let path = getChild(routes, to)
+    return dig(path)?.label
 }

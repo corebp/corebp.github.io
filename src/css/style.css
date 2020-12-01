@@ -35,7 +35,7 @@ a:hover {
 }
 
 .App-logo {
-  height: 20vmin;
+  height: 15vmin;
   pointer-events: none;
 }
 
@@ -48,11 +48,17 @@ a:hover {
 .App-header {
   background-color: #282c34;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+header>h1{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .App-link {

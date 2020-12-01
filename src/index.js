@@ -15,8 +15,9 @@ ReactDOM.render(
     <ThemeProvider>
       <Router>
         <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+          <h1>We're here to help!</h1>
           <img src={logo} className="App-logo" alt="logo" />
-          <h1>Welcome!</h1>
         </header>
 
         <Sidebar routes={routes}>
