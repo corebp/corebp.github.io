@@ -25,7 +25,8 @@ let accounts = [
     {
       label: 'Documentation', route: '/docs', children: [
         { label: 'Accredo', route: '/docs/accredo', children: accredo },
-        { label: 'CoreFire', route: '/docs/corefire', children: corefire }
+        { label: 'CoreFire', route: '/docs/corefire', children: corefire },
+        { label: 'Commands', route: '/docs/commands', source: require('./pages/cmd.md)}
       ]
     }
   ]
