@@ -1,22 +1,29 @@
 import './css/style.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { ThemeProvider } from '@material-ui/core'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core'
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 
 import * as serviceWorker from './components/serviceWorker'
 import Sidebar from './components/sidebar'
 import { mapRoutes } from './functions';
 import routes from './routes';
+import logo from './static/logo.png'
+import { lightBlue } from '@material-ui/core/colors';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider>
+    <ThemeProvider theme={createMuiTheme({
+      status: {
+        danger: lightBlue[500],
+      },
+    })} >
       <Router>
         <header className="App-header">
-          <img src={require('./static/logo.png')} className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo" alt="logo" />
           <h1>We're here to help!</h1>
-          <img src={require('./static/logo.png')} className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo" alt="logo" />
         </header>
 
         <Sidebar routes={routes}>

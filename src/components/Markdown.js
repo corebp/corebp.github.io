@@ -8,7 +8,7 @@ function Markdown({ route }) {
 
     useEffect(() => {
         if (source) {
-            fetch(source).then(res => res.text())
+            fetch(source?.default).then(res => res.text())
                 .then(text => {
                     setMdText(text);
                 })
