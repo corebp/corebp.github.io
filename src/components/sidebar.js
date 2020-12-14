@@ -46,7 +46,7 @@ export default function NavigationSidebar({ routes = [], children }) {
                 <ListItem to={to} {...other} button
                     component={RouterLink}
                     onClick={e => {
-                        window.scrollTo({ top: 0 })
+                        if (!item?.children) { window.scrollTo({ top: 0 }) }
                         setOpen((prevOpen) => !prevOpen)
                     }}
                 >
