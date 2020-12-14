@@ -29,7 +29,7 @@ let accounts = [
   let routes = [
         { label: 'Accredo', route: '/accredo', children: accredo },
         { label: 'CoreFire', route: '/corefire', children: corefire },
-        { label: 'Random', route: '/random', children: commands }
+        { label: 'Random', route: '/random', children: random }
       ]
 
   export default routes
