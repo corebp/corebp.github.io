@@ -14,10 +14,10 @@ import { getLabel } from '../functions'
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        flex: 1,
         display: 'flex',
         flexDirection: 'column',
-        width: '30%',
-        minWidth: 200
+        maxWidth: '30%'
     },
     breadcrumbs: {
         margin: '2%'
@@ -33,9 +33,9 @@ const useStyles = makeStyles((theme) => ({
 
 const LinkRouter = (props) => <Link {...props} component={RouterLink} />;
 
-export default function RouterBreadcrumbs({ routes = [], children }) {
-    const classes = useStyles()
-    
+export default function NavigationSidebar({ routes = [], children }) {
+    let classes = useStyles()
+
     function ListItemLink(props) {
         let { item, to, depth, ...other } = props
         let { label } = item
@@ -43,7 +43,13 @@ export default function RouterBreadcrumbs({ routes = [], children }) {
 
         return <>
             <li>
-                <ListItem button onClick={() => setOpen((prevOpen) => !prevOpen)} component={RouterLink} to={to} {...other}>
+                <ListItem to={to} {...other} button
+                    component={RouterLink}
+                    onClick={e => {
+                        window.scrollTo({ top: 0 })
+                        setOpen((prevOpen) => !prevOpen)
+                    }}
+                >
                     <ListItemText primary={label} />
                     {item?.children && open != null ? open ? <ExpandLess /> : <ExpandMore /> : null}
                 </ListItem>
@@ -52,15 +58,15 @@ export default function RouterBreadcrumbs({ routes = [], children }) {
                 item?.children ?
                     <Collapse component="li" in={open} timeout="auto" unmountOnExit>
                         <List disablePadding>
-                            {item?.children.map((e, i) => {                                  
+                            {item?.children.map((e, i) => {
                                 return (
                                     <ListItemLink
                                         key={i}
                                         item={e}
                                         to={e.route}
                                         depth={depth + 1}
-                                        style={{ paddingLeft: 16 + (16 * (depth + 1))}}
-                                        />
+                                        style={{ paddingLeft: 16 + (16 * (depth + 1)) }}
+                                    />
                                 )
                             }
                             )}
@@ -70,40 +76,42 @@ export default function RouterBreadcrumbs({ routes = [], children }) {
         </>
     }
 
-    return <>
-        <Route>
-            {({ location }) => {
-                const pathnames = location.pathname.split('/').filter((x) => x)
-                return (
-                    <Breadcrumbs className={classes.breadcrumbs} aria-label="breadcrumb">
-                        <LinkRouter color="inherit" to="/">Home</LinkRouter>
-                        {pathnames.map((e, i) => {
-                            const to = `/${pathnames.slice(0, i + 1).join('/')}`;
+    return (
+        <>
+            <Route>
+                {({ location }) => {
+                    const pathnames = location.pathname.split('/').filter((x) => x)
+                    return (
+                        <Breadcrumbs className={classes.breadcrumbs} aria-label="breadcrumb">
+                            <LinkRouter color="inherit" to="/">Home</LinkRouter>
+                            {pathnames.map((e, i) => {
+                                const to = `/${pathnames.slice(0, i + 1).join('/')}`;
 
-                            return i === pathnames.length - 1 ?
-                                <Typography color="textPrimary" key={to}>{getLabel(routes, to)}</Typography> :
-                                <LinkRouter color="inherit" to={to} key={to}>{getLabel(routes, to)}</LinkRouter>
-                        })}
-                    </Breadcrumbs>
-                )
-            }}
-        </Route>
+                                return i === pathnames.length - 1 ?
+                                    <Typography color="textPrimary" key={to}>{getLabel(routes, to)}</Typography> :
+                                    <LinkRouter color="inherit" to={to} key={to}>{getLabel(routes, to)}</LinkRouter>
+                            })}
+                        </Breadcrumbs>
+                    )
+                }}
+            </Route>
 
-        <div className="content" style={{ flex: 1, flexDirection: 'row', display: 'flex', marginBottom: '20%' }}>
-            <div className={classes.root}>
-                <nav className={classes.lists} aria-label="mailbox folders">
-                    <List>{routes.map((e, i) => (
-                        <ListItemLink
-                            key={i}
-                            item={e}
-                            to={e.route}
-                            depth={0}
-                        />
-                    ))
+            <div className='container mb-10' >
+                <nav className={`navigation flex-1 ${classes.lists}`} aria-label="mailbox folders">
+                    <List>{routes.map((e, i) => {
+                        return (
+                            <ListItemLink
+                                key={i}
+                                item={e}
+                                to={e.route}
+                                depth={0}
+                            />
+                        )
+                    })
                     }</List>
                 </nav>
+                {children}
             </div>
-            {children}
-        </div>
-    </>
+        </>
+    )
 }

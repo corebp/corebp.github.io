@@ -1,4 +1,3 @@
-import './css/style.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core'
@@ -10,7 +9,7 @@ import { mapRoutes } from './functions';
 import routes from './routes';
 import logo from './static/logo.png'
 import { lightBlue } from '@material-ui/core/colors';
-
+import './css/style.css'
 
 ReactDOM.render(
   <React.StrictMode>

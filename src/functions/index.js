@@ -7,9 +7,8 @@ export function mapRoutes(r) {
         <Route
             path={e.route}
             render={props => {
-                //console.log(e)
                 return (
-                    <div key={i} style={{ flex: 1, flexDirection: 'column' }}>
+                    <div key={i} className='flex-1 flex-col' >
                         {props?.match?.isExact ? <h1 className='content'>{e?.label}</h1> : null}
                         <Markdown {...props} route={e} />
                         {e?.children ? mapRoutes(e.children) : null}
