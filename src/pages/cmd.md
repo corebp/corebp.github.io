@@ -1,7 +1,3 @@
-## Recursively rename files of extension
-`for /R %x in (*.*) do ren "%x" *.webp`
-
-
 ## Register ZeroSSL certificate
 1. Generate .crt and .key files online using ZeroSSL
 2. Convert to PFC using OpenSSL
