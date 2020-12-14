@@ -21,12 +21,16 @@ let accounts = [
     { label: 'Extras', route: '/docs/corefire/extras', source: require('./pages/corefire_extras.md') },
   ]
   
+  let commands = [
+    { label: 'ZeroSSL', route: '/docs/commands/zerossl', source: require('./pages/cmd.md') },
+  ]
+  
   let routes = [
     {
       label: 'Documentation', route: '/docs', children: [
         { label: 'Accredo', route: '/docs/accredo', children: accredo },
         { label: 'CoreFire', route: '/docs/corefire', children: corefire },
-        { label: 'Commands', route: '/docs/commands', source: require('./pages/cmd.md')}
+        { label: 'Commands', route: '/docs/commands', children: commands }
       ]
     }
   ]
