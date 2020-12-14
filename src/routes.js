@@ -22,7 +22,8 @@ let accounts = [
   ]
   
   let commands = [
-    { label: 'ZeroSSL', route: '/docs/commands/zerossl', source: require('./pages/cmd.md') },
+    { label: 'ZeroSSL', route: '/docs/commands/zerossl', source: require('./pages/zerossl.md') },
+    { label: 'Random', route: '/docs/commands/random', source: require('./pages/random.md') },      
   ]
   
   let routes = [
