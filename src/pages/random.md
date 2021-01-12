@@ -3,3 +3,6 @@
 
 ## Keep PowerShell open on script
 `powershell.exe -NoExit PARAMS`
+
+## Accredo StringList
+`LIST.CommaText = "1,2,3,4,5"`
