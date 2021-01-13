@@ -13,6 +13,7 @@ let accounts = [
     { label: 'Purchase Orders', route: '/accredo/purchasing', source: require('./pages/accredo_purchase_orders.md') },
     { label: 'Job Costing', route: '/accredo/jobs', source: require('./pages/accredo_jobs.md') },
     { label: 'Company', route: '/accredo/company', source: require('./pages/accredo_company.md') },
+    { label: 'Scripting', route: '/accredo/scripting', source: require('./pages/accredo_scripting.md') },
   ]
   
   let corefire = [
