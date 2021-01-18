@@ -3,3 +3,6 @@
 
 ## Keep PowerShell open on script
 `powershell.exe -NoExit PARAMS`
+
+## adb listen - React Native 
+`adb logcat *:S ReactNative:V ReactNativeJS:V`
