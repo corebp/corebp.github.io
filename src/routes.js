@@ -22,15 +22,9 @@ let accounts = [
     { label: 'Extras', route: '/corefire/extras', source: require('./pages/corefire_extras.md') },
   ]
   
-  let random = [
-    { label: 'ZeroSSL', route: '/random/zerossl', source: require('./pages/zerossl.md') },
-    { label: 'Commands', route: '/random/cmd', source: require('./pages/random.md') },      
-  ]
-  
   let routes = [
         { label: 'Accredo', route: '/accredo', children: accredo },
         { label: 'CoreFire', route: '/corefire', children: corefire },
-        { label: 'Random', route: '/random', children: random }
       ]
 
   export default routes
