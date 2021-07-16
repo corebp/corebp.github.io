@@ -19,6 +19,8 @@ let accounts = [
   let corefire = [
     { label: 'Jobs', route: '/corefire/jobs', source: require('./pages/corefire_jobs.md') },
     { label: 'Solutions', route: '/corefire/solutions', source: require('./pages/corefire_prods.md') },
+    { label: 'Purchase Orders', route: '/corefire/po', source: require('./pages/corefire_purchaseorders.md') },
+    { label: 'Staff', route: '/corefire/staff', source: require('./pages/corefire_staff.md') },
     { label: 'Extras', route: '/corefire/extras', source: require('./pages/corefire_extras.md') },
   ]
   
