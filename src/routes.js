@@ -27,6 +27,8 @@ let accounts = [
   let routes = [
         { label: 'Accredo', route: '/accredo', children: accredo },
         { label: 'CoreFire', route: '/corefire', children: corefire },
+        { label: 'My CoreBP', route: '/mycorebp' },
+        { label: 'CIBS', route: '/cibs' },
       ]
 
   export default routes
