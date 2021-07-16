@@ -2,6 +2,9 @@
 
 Here you'll find helpful tips and guides to do with the Jobs section of the CoreFire system
 
+This section is the heart of the application - recording the work done on site is enabled here.
+The inital screen contains essential information such as the Job Code, the client associated with the Job, the Sales Person responsible for the Job, the type of Job it is and when it is required to be completed by.
+
 ### Recording work on a Job
 1. Select the relevant Job on the landing screen
 2. Select the site level where the work is taking place
