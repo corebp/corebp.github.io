@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createMuiTheme, ThemeProvider } from '@material-ui/core'
+import { createTheme } from '@material-ui/core/styles'
+import { ThemeProvider } from '@material-ui/core'
 import { HashRouter as Router, Switch } from "react-router-dom";
 
 import * as serviceWorker from './components/serviceWorker'
@@ -13,13 +14,9 @@ import './css/style.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={createMuiTheme({
-      status: {
-        danger: lightBlue[500],
-      },
-    })} >
-      <Router>
-        <header className="App-header">
+    <ThemeProvider theme={createTheme({ status: { danger: lightBlue[500] }})} >
+    <Router>
+      <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1>We're here to help!</h1>
           <img src={logo} className="App-logo" alt="logo" />

@@ -7,14 +7,10 @@ function Markdown({ route }) {
     const [mdText, setMdText] = useState('');
 
     useEffect(() => {
-        if (source) {
-            fetch(source?.default).then(res => res.text())
-                .then(text => {
-                    setMdText(text);
-                })
-                .catch((error) => console.error(error));
-        }
-    })
+        fetch(source?.default).then(res => res.text())
+            .then(text => setMdText(text))
+            .catch((error) => console.error(error));
+    }, [source])
 
     return (
         <>
