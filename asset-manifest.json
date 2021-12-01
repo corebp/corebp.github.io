@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/corebp.github.io/static/css/main.2ad36696.chunk.css",
+    "main.js": "/corebp.github.io/static/js/main.ebd58056.chunk.js",
+    "main.js.map": "/corebp.github.io/static/js/main.ebd58056.chunk.js.map",
+    "runtime-main.js": "/corebp.github.io/static/js/runtime-main.9b0d6c87.js",
+    "runtime-main.js.map": "/corebp.github.io/static/js/runtime-main.9b0d6c87.js.map",
+    "static/js/2.264629e2.chunk.js": "/corebp.github.io/static/js/2.264629e2.chunk.js",
+    "static/js/2.264629e2.chunk.js.map": "/corebp.github.io/static/js/2.264629e2.chunk.js.map",
+    "index.html": "/corebp.github.io/index.html",
+    "static/css/main.2ad36696.chunk.css.map": "/corebp.github.io/static/css/main.2ad36696.chunk.css.map",
+    "static/js/2.264629e2.chunk.js.LICENSE.txt": "/corebp.github.io/static/js/2.264629e2.chunk.js.LICENSE.txt",
+    "static/media/accredo_accounts_payable.md": "/corebp.github.io/static/media/accredo_accounts_payable.b0559f48.md",
+    "static/media/accredo_accounts_receivable.md": "/corebp.github.io/static/media/accredo_accounts_receivable.be479eed.md",
+    "static/media/accredo_cash_book.md": "/corebp.github.io/static/media/accredo_cash_book.161e5652.md",
+    "static/media/accredo_company.md": "/corebp.github.io/static/media/accredo_company.d21d9b3b.md",
+    "static/media/accredo_general_ledger.md": "/corebp.github.io/static/media/accredo_general_ledger.102342ea.md",
+    "static/media/accredo_gst.md": "/corebp.github.io/static/media/accredo_gst.fb2dd85d.md",
+    "static/media/accredo_jobs.md": "/corebp.github.io/static/media/accredo_jobs.ec9fa6d9.md",
+    "static/media/accredo_prods.md": "/corebp.github.io/static/media/accredo_prods.8db0705e.md",
+    "static/media/accredo_purchase_orders.md": "/corebp.github.io/static/media/accredo_purchase_orders.4125ee0a.md",
+    "static/media/accredo_sales.md": "/corebp.github.io/static/media/accredo_sales.a91ff061.md",
+    "static/media/accredo_scripting.md": "/corebp.github.io/static/media/accredo_scripting.9bfab4b5.md",
+    "static/media/corefire_extras.md": "/corebp.github.io/static/media/corefire_extras.a88eec71.md",
+    "static/media/corefire_jobs.md": "/corebp.github.io/static/media/corefire_jobs.25f34434.md",
+    "static/media/corefire_prods.md": "/corebp.github.io/static/media/corefire_prods.4e6437db.md",
+    "static/media/corefire_purchaseorders.md": "/corebp.github.io/static/media/corefire_purchaseorders.eb923cd2.md",
+    "static/media/corefire_staff.md": "/corebp.github.io/static/media/corefire_staff.050c2fc9.md",
+    "static/media/logo.be9cfe1a.png": "/corebp.github.io/static/media/logo.be9cfe1a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9b0d6c87.js",
+    "static/js/2.264629e2.chunk.js",
+    "static/css/main.2ad36696.chunk.css",
+    "static/js/main.ebd58056.chunk.js"
+  ]
+}
